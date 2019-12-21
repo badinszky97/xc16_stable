@@ -13,7 +13,7 @@ docker pull badinszky97/xc16_stable
 ## Running an empty tests
 
 ```
-docker run -it -v ~:/repom badinszky97/xc16_stable
+docker run -it badinszky97/xc16_stable
 ```
 
 ### Running the container with a project
