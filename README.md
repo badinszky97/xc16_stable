@@ -39,7 +39,7 @@ make
 
 ## Author
 
-* **Daniel Badinszky** - *Initial work* - [Github](https://github.com/badinszky97) [Gitlab](https://github.com/badidani) 
+* **Daniel Badinszky** - *Initial work* - [Github](https://github.com/badinszky97) [Gitlab](https://gitlab.com/badidani) 
 
 
 ## License
