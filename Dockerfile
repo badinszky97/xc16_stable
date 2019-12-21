@@ -21,14 +21,14 @@ RUN apt update \
 RUN pip install glob2
 
 
-# Download and install XC16 compiler V1.26
+# Download and install XC16 compiler 
 RUN curl -fSL -A "Mozilla/4.0" -o /tmp/xc16.run "http://www.microchip.com/mplabxc16linux" \
  && chmod a+x /tmp/xc16.run \
  && /tmp/xc16.run --mode unattended --netservername localhost --LicenseType FreeMode \
  && rm /tmp/xc16.run
 ENV PATH $PATH:/opt/microchip/xc16/bin
 
-# Download and install MPLAB X IDE
+# Download and install MPLAB X IDE v3.40
 # Use url: http://www.microchip.com/mplabx-ide-linux-installer to get the latest version
 
 RUN curl -fSL -A "Mozilla/4.0" -o /tmp/mplabx-installer.tar "http://ww1.microchip.com/downloads/en/DeviceDoc/MPLABX-v3.40-linux-installer.tar" \
