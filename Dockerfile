@@ -19,7 +19,7 @@ RUN apt update \
  && rm -rf /var/lib/apt/lists/* \
  && pip install --upgrade pip
 RUN pip install glob2
-
+RUN apt autoclean && apt autoremove
 
 # Download and install XC16 compiler 
 RUN curl -fSL -A "Mozilla/4.0" -o /tmp/xc16.run "http://www.microchip.com/mplabxc16linux" \
