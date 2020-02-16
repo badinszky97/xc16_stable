@@ -37,3 +37,9 @@ RUN curl -fSL -A "Mozilla/4.0" -o /tmp/mplabx-installer.tar "http://ww1.microchi
     -- --unattendedmodeui none --mode unattended && rm /MPLABX-v3.40-linux-installer.sh
 
 ENV PATH $PATH:/opt/microchip/mplabx/v3.40/bin
+
+# Download and install MLA 2013-06-15
+RUN curl -fSL -A "Mozilla/4.0" -o /tmp/mla.run "http://ww1.microchip.com/downloads/en/softwarelibrary/microchip-libraries-for-applications-v2013-06-15-linux-installer.run" \
+ && chmod a+x /tmp/mla.run \
+ && /tmp/mla.run --unattendedmodeui none --mode unattended --enable-components TCPIPDemoComp  --prefix /opt/microchip/mla/ \
+ && rm /tmp/mla.run
